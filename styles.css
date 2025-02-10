@@ -1,102 +1,204 @@
-/* Import Poppins Font */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
-
-/* Reset CSS */
+/* ===== Reset Default Styles ===== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    background: #f7f7f7;
     color: #333;
-    background-color: #f4f4f9;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+    text-align: center;
     padding: 20px;
 }
 
-/* Header */
+/* ===== Header Styling ===== */
 header {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
-header h1 {
+.logo {
+    width: 60%;
+    max-width: 300px;
+    max-height: 140px;
+    object-fit: contain;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+h1 {
+    font-size: 24px;
     color: #e53935;
-    font-size: 26px;
-    font-weight: 600;
-    margin-bottom: 20px;
+    margin-top: 10px;
 }
 
-/* Main content */
-main {
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* ===== Tombol Pilihan Modem ===== */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
     width: 100%;
-    max-width: 800px;
-    background: #fff;
-    padding: 24px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    text-decoration: none;
+    padding: 15px;
+    background: linear-gradient(145deg, #e60012, #ff2a68);
+    color: #fff;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 50px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease-in-out;
+    text-transform: uppercase;
+}
+
+.btn:hover {
+    transform: translateY(-5px);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(145deg, #ff2a68, #e60012);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
+}
+
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+
+/* ===== Text Section Styling ===== */
+.hidden {
+    display: none;
+}
+
+main section {
+    background: white;
+    padding: 20px;
+    margin-top: 20px;
     border-radius: 10px;
-    box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    max-width: 600px;
+    margin: 20px auto;
+    transition: all 0.3s ease-in-out;
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+main section:not(.hidden) {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 main h2 {
-    color: #e53935;
-    font-size: 22px;
+    font-size: 20px;
     font-weight: 600;
-    margin-bottom: 15px;
-}
-
-main ol {
-    margin-left: 20px;
-    margin-bottom: 20px;
-    line-height: 1.8;
-    font-weight: 300;
-}
-
-main ul {
-    margin-top: 10px;
+    color: #e53935;
     margin-bottom: 10px;
-    margin-left: 20px;
-    font-weight: 300;
+    text-align: center;
 }
 
-/* WhatsApp Contact Button */
+main ol,
+main ul {
+    margin: 10px 20px;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+main ol li,
+main ul li {
+    margin-bottom: 10px;
+}
+
+/* ===== Tombol WhatsApp ===== */
 .whatsapp {
-    text-align: center;
-    margin-bottom: 20px;
+    margin-top: 30px;
 }
 
 .whatsapp a {
     display: inline-block;
-    background: linear-gradient(135deg, #e53935, #ff5252);
-    color: #fff;
-    padding: 12px 24px;
-    border-radius: 50px;
-    font-weight: 600;
+    background: #25D366;
+    color: white;
+    font-size: 18px;
+    padding: 12px 20px;
+    border-radius: 25px;
     text-decoration: none;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.15);
-    font-size: 16px;
-    transition: background 0.3s ease;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out;
 }
 
 .whatsapp a:hover {
-    background: linear-gradient(135deg, #d32f2f, #ff1744);
+    background: #1ebd50;
 }
 
-/* Footer */
+/* ===== Footer Styling ===== */
 footer {
-    text-align: center;
-    margin-top: 50px;
+    margin-top: 30px;
     font-size: 14px;
-    color: #777;
-    font-weight: 300;
-    letter-spacing: 0.5px;
+    color: #666;
 }
-footer p {
-    margin-bottom: 5px;
+
+/* ===== Responsiveness ===== */
+@media screen and (max-width: 1024px) {
+    .wrapper { padding: 1.5rem; }
+    .title { font-size: 1.75rem; }
+    .intro { font-size: 1.125rem; }
+    .btn { font-size: 1.125rem; }
+}
+
+@media screen and (max-width: 768px) {
+    .logo { width: 70%; max-height: 120px; }
+    .title { font-size: 1.5rem; }
+    .intro { font-size: 1rem; }
+    .btn { font-size: 1rem; }
+    .button-container { gap: 0.9375rem; }
+    .btn-icon { width: 2.1875rem; height: 2.1875rem; }
+}
+
+@media screen and (max-width: 480px) {
+    .wrapper { padding: 1rem; }
+    .title { font-size: 1.25rem; }
+    .intro { font-size: 0.9375rem; }
+    .btn { font-size: 0.875rem; padding: 1rem; }
+    .btn-icon { width: 1.875rem; height: 1.875rem; }
+}
+
+    .btn {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .btn-icon {
+        width: 30px;
+        height: 30px;
+    }
+
+    main h2 {
+        font-size: 18px;
+    }
+
+    main section {
+        padding: 15px;
+    }
 }
