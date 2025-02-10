@@ -59,7 +59,7 @@ p {
     align-items: center;
     justify-content: flex-start;
     text-decoration: none;
-    padding: 15px;
+    padding: 15px 20px;
     background: linear-gradient(145deg, #e60012, #ff2a68);
     color: #fff;
     font-size: 16px;
@@ -82,9 +82,13 @@ p {
 }
 
 .btn-icon {
-    width: 40px;
-    height: 40px;
+    width: 35px;
+    height: 35px;
     margin-right: 15px;
+    object-fit: contain;
+    flex-shrink: 0;
+    border-radius: 5px; /* Opsional, untuk tampilan lebih menarik */
+    background-color: white; /* Tambahkan latar belakang putih jika perlu */
 }
 
 /* ===== Text Section Styling ===== */
@@ -161,47 +165,25 @@ footer {
 
 /* ===== Responsiveness ===== */
 @media screen and (max-width: 1024px) {
-    .logo { 
-        width: 60%; 
-        max-height: 120px; 
-    }
-    h1 {
-        font-size: 20px;
-    }
-    .btn {
-        font-size: 14px;
-        padding: 12px;
-    }
+    .wrapper { padding: 1.5rem; }
+    .title { font-size: 1.75rem; }
+    .intro { font-size: 1.125rem; }
+    .btn { font-size: 1.125rem; }
 }
 
 @media screen and (max-width: 768px) {
-    .logo { 
-        width: 50%; 
-        max-height: 100px; 
-    }
-    h1 {
-        font-size: 18px;
-    }
-    .btn {
-        font-size: 14px;
-        padding: 10px;
-    }
+    .logo { width: 70%; max-height: 120px; }
+    .title { font-size: 1.5rem; }
+    .intro { font-size: 1rem; }
+    .btn { font-size: 1rem; }
+    .button-container { gap: 0.9375rem; }
+    .btn-icon { width: 30px; height: 30px; }
 }
 
 @media screen and (max-width: 480px) {
-    .logo { 
-        width: 40%; 
-        max-height: 80px; 
-    }
-    h1 {
-        font-size: 16px;
-    }
-    .btn {
-        font-size: 14px;
-        padding: 10px;
-    }
-    .btn-icon {
-        width: 30px;
-        height: 30px;
-    }
+    .wrapper { padding: 1rem; }
+    .title { font-size: 1.25rem; }
+    .intro { font-size: 0.9375rem; }
+    .btn { font-size: 0.875rem; padding: 1rem; }
+    .btn-icon { width: 25px; height: 25px; }
 }
