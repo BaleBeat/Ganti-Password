@@ -3,78 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cara Ganti Password & Nama Wi-Fi pada Modem</title>
+    <title>Cara Ganti Password & Nama Wi-Fi</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+    <!-- Header -->
     <header>
-        <h1>Cara Ganti Password & Nama Wi-Fi pada Modem</h1>
+        <img src="IMG_7516.png" alt="Logo PT. Adhitama Gania Sejahtera" class="logo">
+        <h1>Cara Ganti Password & Nama Wi-Fi</h1>
+        <p>Pilih modem yang ingin Anda atur:</p>
     </header>
-    
+
+    <!-- Tombol Pilihan Modem -->
+    <div class="button-container">
+        <button class="btn" onclick="showInstructions('zte')">
+            <img src="ZTE.png" alt="ZTE Icon" class="btn-icon"> Modem ZTE
+        </button>
+        <button class="btn" onclick="showInstructions('fiberhome')">
+            <img src="Fiberhome.png" alt="FiberHome Icon" class="btn-icon"> Modem FiberHome
+        </button>
+        <button class="btn" onclick="showInstructions('huawei')">
+            <img src="Huawei.png" alt="Huawei Icon" class="btn-icon"> Modem Huawei
+        </button>
+    </div>
+
+    <!-- Teks Instruksi -->
     <main>
-        <section>
-            <h2>Cara Ganti Password & Nama Wi-Fi pada Modem ZTE</h2>
+        <section id="zte" class="hidden">
+            <h2>Cara Ganti Password & Nama Wi-Fi - ZTE</h2>
             <ol>
-                <li>Pastikan perangkat Anda sudah terhubung ke jaringan Wi-Fi.</li>
-                <li>Buka Google Chrome (atau browser lain yang Anda pilih).</li>
-                <li>Ketik <code>192.168.1.1</code> pada bilah alamat browser dan tekan Enter. Ini adalah alamat IP untuk mengakses halaman login modem.</li>
-                <li>Anda akan diminta untuk memasukkan Username dan Password:
+                <li>Hubungkan perangkat ke Wi-Fi.</li>
+                <li>Buka browser dan masukkan <code>192.168.1.1</code>.</li>
+                <li>Login dengan:
                     <ul>
-                        <li>Username: <strong>user</strong></li>
-                        <li>Password: <strong>user</strong></li>
+                        <li><strong>Username:</strong> user</li>
+                        <li><strong>Password:</strong> user</li>
                     </ul>
                 </li>
-                <li>Setelah berhasil login, pilih menu <strong>Local Network</strong> (terletak di bagian atas).</li>
-                <li>Pada menu sebelah kiri, pilih <strong>WLAN</strong>.</li>
-                <li>Scroll ke bawah dan pilih <strong>WLAN SSID Configuration</strong>.</li>
-                <li>Di bagian ini, Anda dapat mengubah:
+                <li>Pilih menu <strong>Local Network</strong> → <strong>WLAN</strong> → <strong>WLAN SSID Configuration</strong>.</li>
+                <li>Ubah:
                     <ul>
-                        <li>Name SSID: Untuk mengganti nama Wi-Fi sesuai keinginan Anda.</li>
-                        <li>WPA Passphrase: Untuk mengganti kata sandi Wi-Fi.</li>
+                        <li><strong>Name SSID:</strong> untuk mengganti nama Wi-Fi.</li>
+                        <li><strong>WPA Passphrase:</strong> untuk mengganti password.</li>
                     </ul>
                 </li>
-                <li>Setelah selesai mengubah, klik <strong>Simpan</strong> atau <strong>Apply</strong> untuk menyimpan perubahan Anda.</li>
+                <li>Klik <strong>Simpan</strong> atau <strong>Apply</strong>.</li>
             </ol>
         </section>
 
-        <section>
-            <h2>Cara Ganti Password & Nama Wi-Fi pada Modem FiberHome</h2>
+        <section id="fiberhome" class="hidden">
+            <h2>Cara Ganti Password & Nama Wi-Fi - FiberHome</h2>
             <ol>
-                <li>Pastikan perangkat Anda terhubung ke jaringan Wi-Fi terlebih dahulu.</li>
-                <li>Buka Google Chrome (atau browser lain yang Anda pilih).</li>
-                <li>Ketik <code>192.168.1.1</code> pada bilah alamat browser dan tekan Enter untuk membuka halaman login administrator modem.</li>
-                <li>Anda akan diminta untuk memasukkan Username dan Password:
+                <li>Hubungkan perangkat ke Wi-Fi.</li>
+                <li>Buka browser dan masukkan <code>192.168.1.1</code>.</li>
+                <li>Login dengan:
                     <ul>
-                        <li>Username: <strong>user</strong></li>
-                        <li>Password: <strong>user1234</strong></li>
+                        <li><strong>Username:</strong> user</li>
+                        <li><strong>Password:</strong> user1234</li>
                     </ul>
                 </li>
-                <li>Setelah login berhasil, pilih menu <strong>Network</strong> yang ada di bagian atas.</li>
-                <li>Pilih salah satu dari dua opsi berikut, tergantung pada jaringan yang Anda gunakan:
+                <li>Buka menu <strong>Network</strong> → <strong>2.4G Advanced</strong> atau <strong>5G Advanced</strong>.</li>
+                <li>Ubah:
                     <ul>
-                        <li>2.4G Advanced (untuk Wi-Fi 4G)</li>
-                        <li>5G Advanced (untuk Wi-Fi 5G)</li>
+                        <li><strong>Name SSID:</strong> untuk mengganti nama Wi-Fi.</li>
+                        <li><strong>WPA Passphrase:</strong> untuk mengganti password.</li>
                     </ul>
                 </li>
-                <li>Pada halaman konfigurasi, ubah:
+                <li>Klik <strong>Apply</strong>.</li>
+            </ol>
+        </section>
+
+        <section id="huawei" class="hidden">
+            <h2>Cara Ganti Password & Nama Wi-Fi - Huawei</h2>
+            <ol>
+                <li>Hubungkan perangkat ke Wi-Fi.</li>
+                <li>Buka browser dan masukkan <code>192.168.100.1</code>.</li>
+                <li>Login dengan:
                     <ul>
-                        <li>Name SSID: Ganti nama Wi-Fi sesuai keinginan Anda.</li>
-                        <li>WPA Passphrase: Ganti kata sandi Wi-Fi Anda.</li>
+                        <li><strong>Username:</strong> admin</li>
+                        <li><strong>Password:</strong> admin</li>
                     </ul>
                 </li>
-                <li>Klik <strong>Simpan</strong> atau <strong>Apply</strong> untuk menyimpan perubahan.</li>
+                <li>Pilih menu <strong>Network</strong> → <strong>WLAN Settings</strong> → <strong>Advanced</strong>.</li>
+                <li>Ubah:
+                    <ul>
+                        <li><strong>SSID Name:</strong> untuk mengganti nama Wi-Fi.</li>
+                        <li><strong>Passphrase:</strong> untuk mengganti password.</li>
+                    </ul>
+                </li>
+                <li>Klik <strong>Apply</strong>.</li>
             </ol>
         </section>
     </main>
-    
+
+    <!-- Tombol WhatsApp -->
     <div class="whatsapp">
-        <a href="https://wa.me/6282330273999?text=Halo,%20saya%20butuh%20bantuan%20untuk%20mengganti%20nama%20dan%20password%20wifi%20saya." target="_blank">
-            Tekan Disini Bila Ada Kendala
+        <a href="https://wa.me/6282330273999?text=Halo,%20saya%20butuh%20bantuan%20mengganti%20password%20Wi-Fi." target="_blank">
+            Tekan Di Sini Bila Ada Kendala
         </a>
     </div>
 
+    <!-- Footer -->
     <footer>
-        <p>Dilayani oleh PT. ADHITAMA GANIA SEJAHTERA, Mitra Resmi Indihome.</p>
+        <p>PT. Adhitama Gania Sejahtera - Mitra Resmi Indihome</p>
     </footer>
+
+    <!-- Script untuk Interaksi -->
+    <script>
+        function showInstructions(id) {
+            document.querySelectorAll("section").forEach(section => {
+                section.classList.add("hidden");
+            });
+            document.getElementById(id).classList.remove("hidden");
+        }
+    </script>
+
 </body>
 </html>
