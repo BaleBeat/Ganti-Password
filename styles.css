@@ -13,22 +13,25 @@ body {
     padding: 20px;
 }
 
-/* ===== Header Styling ===== */
-header {
-    margin-bottom: 30px;
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 1.25rem;
 }
 
 .logo {
-    width: auto; /* Sesuaikan otomatis */
-    max-width: 300px;
-    height: auto; /* Jaga proporsi asli */
+    width: 60%; /* Menggunakan persentase untuk fleksibilitas */
+    max-width: 350px;
     max-height: 140px;
-    margin-bottom: 20px;
+    object-fit: contain;
+    margin-bottom: 1.25rem;
     transition: transform 0.3s ease-in-out;
+    -webkit-transition: transform 0.3s ease-in-out;
 }
 
 .logo:hover {
     transform: scale(1.1);
+    -webkit-transform: scale(1.1);
 }
 
 h1 {
