@@ -1,123 +1,346 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cara Ganti Password & Nama Wi-Fi</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cara Ganti Password & Nama Wi-Fi</title>
+  <!-- TailwindCSS (jika diperlukan untuk utility class) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <img src="IMG_7516.png" alt="Logo PT. Adhitama Gania Sejahtera" class="logo">
-        <h1>Cara Ganti Password & Nama Wi-Fi</h1>
-        <p>Pilih modem yang ingin Anda atur:</p>
-    </header>
+  <noscript>
+    <p style="color:red; font-weight:bold;">
+      Halaman ini membutuhkan JavaScript untuk menampilkan instruksi. Mohon aktifkan JavaScript di browser Anda.
+    </p>
+  </noscript>
 
-    <!-- Tombol Pilihan Modem -->
-    <div class="button-container">
-        <button class="btn" onclick="showInstructions('zte')">
-            <img src="ZTE.png" alt="ZTE Icon" class="btn-icon"> Modem ZTE
-        </button>
-        <button class="btn" onclick="showInstructions('fiberhome')">
-            <img src="Fiberhome.png" alt="FiberHome Icon" class="btn-icon"> Modem FiberHome
-        </button>
-        <button class="btn" onclick="showInstructions('huawei')">
-            <img src="Huawei.png" alt="Huawei Icon" class="btn-icon"> Modem Huawei
-        </button>
+  <!-- Header -->
+  <header>
+    <img src="IMG_7516.png" alt="Logo PT. Adhitama Gania Sejahtera" class="logo">
+    <h1>Cara Ganti Password & Nama Wi-Fi</h1>
+    <p>Pilih modem yang ingin Anda atur:</p>
+  </header>
+
+  <!-- Tombol Pilihan Modem -->
+  <div class="button-container">
+    <button class="btn" onclick="showInstructions('zte')" aria-label="Tampilkan instruksi untuk Modem ZTE">
+      <img src="ZTE.png" alt="ZTE Icon" class="btn-icon"> Modem ZTE
+    </button>
+    <button class="btn" onclick="showInstructions('fiberhome')" aria-label="Tampilkan instruksi untuk Modem FiberHome">
+      <img src="Fiberhome.png" alt="FiberHome Icon" class="btn-icon"> Modem FiberHome
+    </button>
+    <button class="btn" onclick="showInstructions('huawei')" aria-label="Tampilkan instruksi untuk Modem Huawei">
+      <img src="Huawei.png" alt="Huawei Icon" class="btn-icon"> Modem Huawei
+    </button>
+  </div>
+
+  <!-- Container Instruksi -->
+  <main class="container">
+    <div id="instructions-container">
+      <!-- Instruksi ZTE -->
+      <section id="zte" class="instruction-section hidden" data-instruction>
+        <h2>Cara Ganti Password & Nama Wi-Fi - ZTE</h2>
+        <div class="steps">
+          <!-- Langkah 1 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Connect.png" alt="Koneksi jaringan" class="icon-img">
+              </div>
+              <div class="step-number">1</div>
+            </div>
+            <p>Koneksikan jaringan menggunakan Wi-Fi atau kabel LAN.</p>
+          </div>
+          <!-- Langkah 2 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Adress.png" alt="Alamat IP" class="icon-img">
+              </div>
+              <div class="step-number">2</div>
+            </div>
+            <p>Masukkan alamat IP <span class="bold">192.168.1.1</span> ke browser Anda.</p>
+          </div>
+          <!-- Langkah 3 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="User.png" alt="Login" class="icon-img">
+              </div>
+              <div class="step-number">3</div>
+            </div>
+            <p>
+              Masukkan<br> <span class="bold">Username:</span> user<br>
+              <span class="bold">Password:</span> user
+            </p>
+          </div>
+          <!-- Langkah 4 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Setting.png" alt="Pengaturan Wi-Fi" class="icon-img">
+              </div>
+              <div class="step-number">4</div>
+            </div>
+            <p>
+              Masuk ke menu <span class="bold">Local Network</span>, klik <span class="bold">WLAN</span>, lalu klik <span class="bold">WLAN SSID Configuration</span>.
+            </p>
+          </div>
+          <!-- Langkah 5 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Adress.png" alt="SSID dan Passphrase" class="icon-img">
+              </div>
+              <div class="step-number">5</div>
+            </div>
+            <p>
+              <span class="bold">SSID:</span> Untuk mengganti nama Wi-Fi.<br>
+              <span class="bold">WPA Passphrase:</span> Untuk mengganti password Wi-Fi.
+            </p>
+          </div>
+          <!-- Langkah 6 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Apply3.png" alt="Simpan perubahan" class="icon-img">
+              </div>
+              <div class="step-number">6</div>
+            </div>
+            <p>Tekan <span class="bold">Simpan</span> atau <span class="bold">Apply</span>.</p>
+          </div>
+          <!-- Langkah 7 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Sambung.png" alt="Sambungkan kembali" class="icon-img">
+              </div>
+              <div class="step-number">7</div>
+            </div>
+            <p>Sambungkan kembali dengan password Wi-Fi yang telah dibuat.</p>
+          </div>
+        </div>
+        <!-- Tombol Kembali -->
+        <div class="back-btn">
+          <button class="btn" onclick="hideInstructions()" aria-label="Kembali ke pilihan modem">
+            Kembali ke Pilihan Modem
+          </button>
+        </div>
+      </section>
+
+      <!-- Instruksi FiberHome -->
+      <section id="fiberhome" class="instruction-section hidden" data-instruction>
+        <h2>Cara Ganti Password & Nama Wi-Fi - FiberHome</h2>
+        <div class="steps">
+          <!-- Langkah 1 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Connect.png" alt="Koneksi jaringan" class="icon-img">
+              </div>
+              <div class="step-number">1</div>
+            </div>
+            <p>Koneksikan jaringan menggunakan Wi-Fi atau kabel LAN.</p>
+          </div>
+          <!-- Langkah 2 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Adress.png" alt="Alamat IP" class="icon-img">
+              </div>
+              <div class="step-number">2</div>
+            </div>
+            <p>Masukkan alamat IP <span class="bold">192.168.1.1</span> ke browser Anda.</p>
+          </div>
+          <!-- Langkah 3 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="User.png" alt="Login" class="icon-img">
+              </div>
+              <div class="step-number">3</div>
+            </div>
+            <p>
+              Masukkan<br> <span class="bold">Username:</span> user<br>
+              <span class="bold">Password:</span> user
+            </p>
+          </div>
+          <!-- Langkah 4 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Setting.png" alt="Pengaturan Wi-Fi" class="icon-img">
+              </div>
+              <div class="step-number">4</div>
+            </div>
+            <p>
+              Masuk ke menu <span class="bold">Network</span>, klik <span class="bold">2.4G Advanced</span>.
+            </p>
+          </div>
+          <!-- Langkah 5 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Adress.png" alt="SSID dan Passphrase" class="icon-img">
+              </div>
+              <div class="step-number">5</div>
+            </div>
+            <p>
+              <span class="bold">SSID:</span> Untuk mengganti nama Wi-Fi.<br>
+              <span class="bold">WPA Passphrase:</span> Untuk mengganti password Wi-Fi.
+            </p>
+          </div>
+          <!-- Langkah 6 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Apply3.png" alt="Simpan perubahan" class="icon-img">
+              </div>
+              <div class="step-number">6</div>
+            </div>
+            <p>Tekan <span class="bold">Simpan</span> atau <span class="bold">Apply</span>.</p>
+          </div>
+          <!-- Langkah 7 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Sambung.png" alt="Sambungkan kembali" class="icon-img">
+              </div>
+              <div class="step-number">7</div>
+            </div>
+            <p>Sambungkan kembali dengan password Wi-Fi yang telah dibuat.</p>
+          </div>
+        </div>
+        <!-- Tombol Kembali -->
+        <div class="back-btn">
+          <button class="btn" onclick="hideInstructions()" aria-label="Kembali ke pilihan modem">
+            Kembali ke Pilihan Modem
+          </button>
+        </div>
+      </section>
+
+      <!-- Instruksi Huawei -->
+      <section id="huawei" class="instruction-section hidden" data-instruction>
+        <h2>Cara Ganti Password & Nama Wi-Fi - HUAWEI</h2>
+        <div class="steps">
+          <!-- Langkah 1 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Connect.png" alt="Koneksi jaringan" class="icon-img">
+              </div>
+              <div class="step-number">1</div>
+            </div>
+            <p>Koneksikan jaringan menggunakan Wi-Fi atau kabel LAN.</p>
+          </div>
+          <!-- Langkah 2 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Adress.png" alt="Alamat IP" class="icon-img">
+              </div>
+              <div class="step-number">2</div>
+            </div>
+            <p>Masukkan alamat IP <span class="bold">192.168.100.1</span> ke browser Anda.</p>
+          </div>
+          <!-- Langkah 3 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="User.png" alt="Login" class="icon-img">
+              </div>
+              <div class="step-number">3</div>
+            </div>
+            <p>
+              Masukkan<br> <span class="bold">Username:</span> Admin<br>
+              <span class="bold">Password:</span> admin
+            </p>
+          </div>
+          <!-- Langkah 4 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Setting.png" alt="Pengaturan Wi-Fi" class="icon-img">
+              </div>
+              <div class="step-number">4</div>
+            </div>
+            <p>
+              Masuk ke menu <span class="bold">Network</span>, klik <span class="bold">WLAN Settings</span>, lalu klik <span class="bold">Advanced</span>.
+            </p>
+          </div>
+          <!-- Langkah 5 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Adress.png" alt="SSID dan Passphrase" class="icon-img">
+              </div>
+              <div class="step-number">5</div>
+            </div>
+            <p>
+              <span class="bold">SSID:</span> Untuk mengganti nama Wi-Fi.<br>
+              <span class="bold">Passphrase:</span> Untuk mengganti password Wi-Fi.
+            </p>
+          </div>
+          <!-- Langkah 6 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Apply3.png" alt="Simpan perubahan" class="icon-img">
+              </div>
+              <div class="step-number">6</div>
+            </div>
+            <p>Tekan <span class="bold">Simpan</span> atau <span class="bold">Apply</span>.</p>
+          </div>
+          <!-- Langkah 7 -->
+          <div class="step-box">
+            <div class="icon-wrapper">
+              <div class="icon-circle">
+                <img src="Sambung.png" alt="Sambungkan kembali" class="icon-img">
+              </div>
+              <div class="step-number">7</div>
+            </div>
+            <p>Sambungkan kembali dengan password Wi-Fi yang telah dibuat.</p>
+          </div>
+        </div>
+        <!-- Tombol Kembali -->
+        <div class="back-btn">
+          <button class="btn" onclick="hideInstructions()" aria-label="Kembali ke pilihan modem">
+            Kembali ke Pilihan Modem
+          </button>
+        </div>
+      </section>
     </div>
+  </main>
 
-    <!-- Teks Instruksi -->
-    <main>
-        <section id="zte" class="hidden">
-            <h2>Cara Ganti Password & Nama Wi-Fi - ZTE</h2>
-            <ol>
-                <li>Hubungkan perangkat ke Wi-Fi.</li>
-                <li>Buka browser dan masukkan <code>192.168.1.1</code></li>
-                <li>Login dengan:
-                    <ul>
-                        <li><strong>Username:</strong> user</li>
-                        <li><strong>Password:</strong> user</li>
-                    </ul>
-                </li>
-                <li>Pilih menu <strong>Local Network</strong> → <strong>WLAN</strong> → <strong>WLAN SSID Configuration</strong>.</li>
-                <li>Ubah:
-                    <ul>
-                        <li><strong>Name SSID:</strong> untuk mengganti nama Wi-Fi.</li>
-                        <li><strong>WPA Passphrase:</strong> untuk mengganti password.</li>
-                    </ul>
-                </li>
-                <li>Klik <strong>Simpan</strong> atau <strong>Apply</strong>.</li>
-            </ol>
-        </section>
+  <!-- Tombol WhatsApp -->
+  <div class="whatsapp">
+    <a href="https://wa.me/6282330273999?text=Halo,%20saya%20butuh%20bantuan%20mengganti%20password%20Wi-Fi." target="_blank" aria-label="Hubungi kami melalui WhatsApp">
+      Tekan Di Sini Bila Ada Kendala
+    </a>
+  </div>
 
-        <section id="fiberhome" class="hidden">
-            <h2>Cara Ganti Password & Nama Wi-Fi - FiberHome</h2>
-            <ol>
-                <li>Hubungkan perangkat ke Wi-Fi.</li>
-                <li>Buka browser dan masukkan <code>192.168.1.1</code></li>
-                <li>Login dengan:
-                    <ul>
-                        <li><strong>Username:</strong> user</li>
-                        <li><strong>Password:</strong> user</li>
-                    </ul>
-                </li>
-                <li>Buka menu <strong>Network</strong> → <strong>2.4G Advanced</strong> atau <strong>5G Advanced</strong>.</li>
-                <li>Ubah:
-                    <ul>
-                        <li><strong>Name SSID:</strong> untuk mengganti nama Wi-Fi.</li>
-                        <li><strong>WPA Passphrase:</strong> untuk mengganti password.</li>
-                    </ul>
-                </li>
-                <li>Klik <strong>Apply</strong>.</li>
-            </ol>
-        </section>
+  <!-- Footer -->
+  <footer>
+    <p>PT. Adhitama Gania Sejahtera - Mitra Resmi Indihome</p>
+  </footer>
 
-        <section id="huawei" class="hidden">
-            <h2>Cara Ganti Password & Nama Wi-Fi - Huawei</h2>
-            <ol>
-                <li>Hubungkan perangkat ke Wi-Fi.</li>
-                <li>Buka browser dan masukkan <code>192.168.100.1</code></li>
-                <li>Login dengan:
-                    <ul>
-                        <li><strong>Username:</strong> Admin</li>
-                        <li><strong>Password:</strong> admin</li>
-                    </ul>
-                </li>
-                <li>Pilih menu <strong>Network</strong> → <strong>WLAN Settings</strong> → <strong>Advanced</strong>.</li>
-                <li>Ubah:
-                    <ul>
-                        <li><strong>SSID Name:</strong> untuk mengganti nama Wi-Fi.</li>
-                        <li><strong>Passphrase:</strong> untuk mengganti password.</li>
-                    </ul>
-                </li>
-                <li>Klik <strong>Apply</strong>.</li>
-            </ol>
-        </section>
-    </main>
-
-    <!-- Tombol WhatsApp -->
-    <div class="whatsapp">
-        <a href="https://wa.me/6282330273999?text=Halo,%20saya%20butuh%20bantuan%20mengganti%20password%20Wi-Fi." target="_blank">
-            Tekan Di Sini Bila Ada Kendala
-        </a>
-    </div>
-
-    <!-- Footer -->
-    <footer>
-        <p>PT. Adhitama Gania Sejahtera - Mitra Resmi Indihome</p>
-    </footer>
-
-    <!-- Script untuk Interaksi -->
-    <script>
-        function showInstructions(id) {
-            document.querySelectorAll("section").forEach(section => {
-                section.classList.add("hidden");
-            });
-            document.getElementById(id).classList.remove("hidden");
-        }
-    </script>
+  <!-- Script untuk Interaksi -->
+  <script>
+    function showInstructions(id) {
+      // Seleksi hanya elemen dengan atribut data-instruction
+      document.querySelectorAll("[data-instruction]").forEach(section => {
+        section.classList.add("hidden");
+      });
+      document.getElementById(id).classList.remove("hidden");
+    }
+    function hideInstructions() {
+      document.querySelectorAll("[data-instruction]").forEach(section => {
+        section.classList.add("hidden");
+      });
+    }
+  </script>
 
 </body>
 </html>
