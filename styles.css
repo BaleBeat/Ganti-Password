@@ -1,49 +1,165 @@
-/* ===== Reset Default Styles ===== */
+/* ===== CSS Variables & Reset Default Styles ===== */
+:root {
+    /* Font & Transitions */
+    --font-primary: 'Poppins', sans-serif;
+    --transition-speed: 0.3s;
+
+    /* Warna Utama */
+    --color-bg: #f7f7f7;
+    --color-text: #333;
+    --color-header: #e53935;
+    --color-secondary: #ff2a68;
+    --color-accent: #ef4444;
+    --color-muted: #666;
+    --color-paragraph: #374151;
+    --color-container-bg: #f3f4f6;
+
+    /* WhatsApp */
+    --color-whatsapp: #25D366;
+    --color-whatsapp-hover: #1ebd50;
+
+    /* Border Radius */
+    --border-radius: 10px;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    font-family: var(--font-primary);
 }
 
 body {
-    background: #f7f7f7;
-    color: #333;
+    background: var(--color-bg);
+    color: var(--color-text);
     text-align: center;
     padding: 20px;
 }
 
-/* Header */
-.header {
+/* ===== Header Styling ===== */
+header {
+    margin-bottom: 30px;
     text-align: center;
-    margin-bottom: 1.25rem;
 }
 
 .logo {
-    width: 60%; /* Menggunakan persentase untuk fleksibilitas */
-    max-width: 350px;
+    display: block; /* pastikan logo sebagai block element */
+    width: 60%;
+    max-width: 300px;
     max-height: 140px;
     object-fit: contain;
-    margin-bottom: 1.25rem;
-    transition: transform 0.3s ease-in-out;
-    -webkit-transition: transform 0.3s ease-in-out;
+    margin: 0 auto 20px auto; /* logo di tengah */
+    transition: transform var(--transition-speed) ease-in-out;
 }
 
 .logo:hover {
     transform: scale(1.1);
-    -webkit-transform: scale(1.1);
 }
 
 h1 {
     font-size: 24px;
-    color: #e53935;
+    color: var(--color-header);
     margin-top: 10px;
 }
 
-p {
+header p {
     font-size: 16px;
-    color: #666;
+    color: var(--color-muted);
     line-height: 1.5;
+}
+
+/* ===== Kontainer Utama ===== */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--color-container-bg);
+    padding: 20px;
+}
+
+/* ===== Grid Langkah-langkah ===== */
+.steps {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 600px;
+    width: 100%;
+}
+
+/* ===== Box Setiap Langkah ===== */
+.step-box {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: var(--border-radius);
+    padding: 16px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.step-box:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== Ikon & Nomor Langkah ===== */
+.icon-wrapper {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin-right: 12px;
+}
+
+.icon-circle {
+    width: 38px;
+    height: 38px;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    position: relative;
+    z-index: 2;
+    opacity: 0.98;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.icon-img {
+    width: 18px;
+    height: 18px;
+}
+
+.step-number {
+    background: var(--color-accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    width: 22px;
+    height: 22px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 4px;
+    position: absolute;
+    left: -12px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    opacity: 0.98;
+    box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.15),
+                inset 1px 1px 2px rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Styling Paragraf & Teks ===== */
+main section p {
+    color: var(--color-paragraph);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.bold {
+    font-weight: bold;
 }
 
 /* ===== Tombol Pilihan Modem ===== */
@@ -62,21 +178,23 @@ p {
     align-items: center;
     justify-content: flex-start;
     text-decoration: none;
-    padding: 15px 20px;
-    background: linear-gradient(145deg, #e60012, #ff2a68);
+    padding: 15px;
+    background: linear-gradient(145deg, var(--color-header), var(--color-secondary));
     color: #fff;
     font-size: 16px;
     font-weight: bold;
     border-radius: 50px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1), -5px -5px 15px rgba(255, 255, 255, 0.3);
-    transition: all 0.3s ease-in-out;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.1),
+                -5px -5px 15px rgba(255, 255, 255, 0.3);
+    transition: all var(--transition-speed) ease-in-out;
     text-transform: uppercase;
 }
 
 .btn:hover {
     transform: translateY(-5px);
-    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2), -8px -8px 20px rgba(255, 255, 255, 0.3);
-    background: linear-gradient(145deg, #ff2a68, #e60012);
+    box-shadow: 8px 8px 20px rgba(0, 0, 0, 0.2),
+                -8px -8px 20px rgba(255, 255, 255, 0.3);
+    background: linear-gradient(145deg, var(--color-secondary), var(--color-header));
 }
 
 .btn:focus {
@@ -84,41 +202,27 @@ p {
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.8);
 }
 
-/* ===== Ikon pada Tombol ===== */
 .btn-icon {
     width: 40px;
     height: 40px;
     margin-right: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: none;
-    font-size: 20px;
 }
 
-.btn-icon img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain; /* Menjaga proporsi gambar */
-    background: none; /* Tidak ada background pada gambar */
-    border-radius: 0; /* Hapus efek melengkung */
-}
-
-/* ===== Text Section Styling ===== */
+/* ===== Bagian Instruksi (Main Section) ===== */
 .hidden {
     display: none;
 }
 
 main section {
-    background: white;
+    background: #fff;
     padding: 20px;
     margin-top: 20px;
-    border-radius: 10px;
+    border-radius: var(--border-radius);
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     text-align: left;
     max-width: 600px;
     margin: 20px auto;
-    transition: all 0.3s ease-in-out;
+    transition: all var(--transition-speed) ease-in-out;
     opacity: 0;
     transform: translateY(20px);
 }
@@ -126,12 +230,24 @@ main section {
 main section:not(.hidden) {
     opacity: 1;
     transform: translateY(0);
+    animation: fadeIn var(--transition-speed) ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 main h2 {
     font-size: 20px;
     font-weight: 600;
-    color: #e53935;
+    color: var(--color-header);
     margin-bottom: 10px;
     text-align: center;
 }
@@ -155,65 +271,48 @@ main ul li {
 
 .whatsapp a {
     display: inline-block;
-    background: #25D366;
-    color: white;
+    background: var(--color-whatsapp);
+    color: #fff;
     font-size: 18px;
     padding: 12px 20px;
     border-radius: 25px;
     text-decoration: none;
     font-weight: bold;
-    transition: background 0.3s ease-in-out;
+    transition: background var(--transition-speed) ease-in-out;
 }
 
 .whatsapp a:hover {
-    background: #1ebd50;
+    background: var(--color-whatsapp-hover);
 }
 
 /* ===== Footer Styling ===== */
 footer {
     margin-top: 30px;
     font-size: 14px;
-    color: #666;
+    color: var(--color-muted);
 }
 
 /* ===== Responsiveness ===== */
-@media screen and (max-width: 1024px) {
-    .logo {
-        width: 70%;
-        max-height: 120px;
+@media (max-width: 768px) {
+    h1 {
+        font-size: 20px;
     }
-    .btn {
-        font-size: 15px;
-        padding: 12px 18px;
-    }
-    .btn-icon {
-        width: 35px;
-        height: 35px;
-    }
-}
 
-@media screen and (max-width: 768px) {
-    .logo {
-        width: 80%;
-        max-height: 100px;
-    }
     .btn {
         font-size: 14px;
-        padding: 10px 16px;
+        padding: 12px;
     }
+
     .btn-icon {
         width: 30px;
         height: 30px;
     }
-}
 
-@media screen and (max-width: 480px) {
-    .btn {
-        font-size: 13px;
-        padding: 10px 14px;
+    main h2 {
+        font-size: 18px;
     }
-    .btn-icon {
-        width: 25px;
-        height: 25px;
+
+    main section {
+        padding: 15px;
     }
 }
